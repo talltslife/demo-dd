@@ -31,6 +31,7 @@ func SearchBars(longitude string, latitude string, location string, limit string
 	if limit != "" {
 		q.Add("limit", limit)
 	}
+	q.Add("sort_by", "rating")
 	q.Add("term", "bars")
 	request.URL.RawQuery = q.Encode()
 
